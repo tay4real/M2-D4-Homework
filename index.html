@@ -11,12 +11,15 @@
 -->
 <html lang="en">
   <head>
+    <title>Strive Team Generator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -25,8 +28,294 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg fixed-top d-flex m-0 p-0">
+      <a class="navbar-brand p-0 m-auto" href="#"
+        ><img src="images/logo.png" width="100"
+      /></a>
+    </nav>
+
+    <main class="bg-secondary" id="main" style="height: auto">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12 col-md-4 col-lg-3 px-2 pt-5">
+            <div class="row bg-white rounded p-1 mb-3">
+              <div class="col-12">
+                <div class="input-group mt-2">
+                  <input
+                    type="text"
+                    id="new-striver"
+                    class="form-control"
+                    placeholder="Add New Striver"
+                    aria-label="New Striver"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      id="add-striver"
+                      style="width: 3em"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="input-group my-2">
+                  <input
+                    type="text"
+                    id="n-teams"
+                    class="form-control"
+                    placeholder="Set Number of Teams"
+                    aria-label="Number of Teams"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary w-100"
+                      type="button"
+                      id="set-team"
+                    >
+                      Set
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row bg-white rounded mb-5">
+              <div class="card border-secondary w-100">
+                <div
+                  class="card-header bg-transparent border-secondary text-center"
+                >
+                  Strivers List
+                </div>
+                <div class="card-body text-secondary p-0 m-0">
+                  <ul id="general-list" class="list-group-flush m-0 p-0"></ul>
+                </div>
+                <div class="card-footer bg-transparent border-secondary">
+                  <input
+                    class="btn btn-secondary w-100"
+                    type="button"
+                    value="Assign"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-12 col-md-8 col-lg-9 bg-secondary px-2 pt-5">
+            <div id="team-container" class="rounded bg-white w-100">
+              <div class="card border-secondary border-0 w-100">
+                <div
+                  class="card-header bg-transparent border-secondary text-center"
+                >
+                  Assigned Teams
+                </div>
+                <div class="card-body text-secondary p-3 m-0 border-0">
+                  <div class="row">
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 1</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 2</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 2</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 2</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 2</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                      <div class="card bg-light mb-3" style="max-width: 18rem">
+                        <div class="card-header">Team 2</div>
+                        <div class="card-body p-0 m-0">
+                          <ul id="team" class="p-2">
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <span id="striver">Ademuyiwa Otubusin</span>
+                                <span
+                                  id="remove"
+                                  class="badge badge-danger"
+                                  style="width: 2em"
+                                  >-</span
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/app.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

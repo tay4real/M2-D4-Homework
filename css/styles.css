@@ -1,0 +1,24 @@
+nav {
+  background-color: #000000;
+}
+
+#main {
+  margin-top: 100px;
+}
+.display-4 {
+  font-size: 2em;
+}
+
+#general-list {
+  overflow: auto;
+  height: 35vh;
+  width: 100%;
+}
+
+#team-container {
+  min-height: 70vh;
+}
+
+#team {
+  list-style-type: none;
+}
